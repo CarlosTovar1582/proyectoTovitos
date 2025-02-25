@@ -11,9 +11,9 @@ function App() {
   return (
     <>
       <Header />
-      <Division />
+      
       <Containers />   
-      <Division />
+     
       <ContainersSalditos />            
       <Footers/>
       
