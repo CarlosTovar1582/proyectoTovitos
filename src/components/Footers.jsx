@@ -34,7 +34,7 @@ const navigation = {
           />
         </svg>
       ),
-    }, 
+    },
   ],
 };
 
@@ -54,7 +54,7 @@ export default function Footers() {
             </a>
           ))}
         </div>
-        <p className="mt-2 text-center text-sm/6 text-gray-200">
+        <p className="mt-2 text-center text-sm/6 text-gray-200 font-Concert-One">
           &copy; 2025 Tovitos, Todos los derechos reservados.
         </p>
       </div>
