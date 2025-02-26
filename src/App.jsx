@@ -11,13 +11,12 @@ function App() {
   return (
     <>
       <Header />
-      
-      <Containers />   
-     
-      <ContainersSalditos />            
-      <Footers/>
-      
-    
+
+      <Containers />
+      <Division />
+      <ContainersSalditos />
+      <Division />
+      <Footers />
     </>
   );
 }
