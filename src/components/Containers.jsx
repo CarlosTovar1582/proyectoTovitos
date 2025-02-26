@@ -14,7 +14,7 @@ export default function Containers() {
   return (
     <div
       style={{
-        backgroundImage: `url("https://i.postimg.cc/0NLZkWK1/Logo-Fondo.png")`,
+        backgroundImage: `url("https://i.postimg.cc/RhMc5JvP/Logo-Fondo1.png")`,
       }}
     >
       <ul role="list" className="space-y-6  pl-6 pr-6 pb-32 rounded-3xl ">
