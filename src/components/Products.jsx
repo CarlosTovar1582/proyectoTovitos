@@ -48,38 +48,300 @@ const seleccionTalla = {
     {
       id: 1,
       grupo: 2,
+      codigo: 1,
       details: [
         {
           id: 6,
           talla: "4",
-          precio: "S/.20",
+          precio: "S/.32",
         },
         {
           id: 8,
           talla: "6",
-          precio: "S/.30",
+          precio: "S/.32",
         },
         {
           id: 10,
           talla: "8",
-          precio: "S/.40",
+          precio: "S/.35",
         },
         {
           id: 12,
           talla: "10",
-          precio: "S/.50",
+          precio: "S/.35",
         },
         {
           id: 14,
           talla: "12",
-          precio: "S/.60",
+          precio: "S/.35",
         },
         {
           id: 16,
           talla: "14",
-          precio: "S/.70",
+          precio: "S/.35",
         },
       ],
+    },
+    {
+      id: 2,
+      grupo: 2,
+      codigo: 2,
+      details: [
+        {
+          id: 6,
+          talla: "4",
+          precio: "S/.32",
+        },
+        {
+          id: 8,
+          talla: "6",
+          precio: "S/.32",
+        },
+        {
+          id: 10,
+          talla: "8",
+          precio: "S/.34",
+        },
+        {
+          id: 12,
+          talla: "10",
+          precio: "S/.34",
+        },
+        {
+          id: 14,
+          talla: "12",
+          precio: "S/.34",
+        },
+        {
+          id: 16,
+          talla: "14",
+          precio: "S/.34",
+        },
+      ],
+    },
+    {
+      id: 3,
+      grupo: 3,
+      codigo: 1,
+      details: [
+        {
+          id: 6,
+          talla: "4",
+          precio: "S/.28",
+        },
+        {
+          id: 8,
+          talla: "6",
+          precio: "S/.28",
+        },
+        {
+          id: 10,
+          talla: "8",
+          precio: "S/.28",
+        },
+        {
+          id: 12,
+          talla: "10",
+          precio: "S/.32",
+        },
+        {
+          id: 14,
+          talla: "12",
+          precio: "S/.32",
+        },
+        {
+          id: 16,
+          talla: "14",
+          precio: "S/.32",
+        },
+      ],
+    },
+    {
+      id: 4,
+      grupo: 2,
+      codigo: 3,
+      details: [
+        {
+          id: 6,
+          talla: "4",
+          precio: "S/.33",
+        },
+        {
+          id: 8,
+          talla: "6",
+          precio: "S/.33",
+        },
+        {
+          id: 10,
+          talla: "8",
+          precio: "S/.35",
+        },
+        {
+          id: 12,
+          talla: "10",
+          precio: "S/.35",
+        },
+        {
+          id: 14,
+          talla: "12",
+          precio: "S/.35",
+        },
+        {
+          id: 16,
+          talla: "14",
+          precio: "S/.35",
+        },
+      ],
+    },
+    //Conjuntos
+    {
+      id: 5,
+      grupo: 1,
+      codigo: 1,
+      details: [
+        {
+          id: 6,
+          talla: "4",
+          precio: "S/.88",
+        },
+        {
+          id: 8,
+          talla: "6",
+          precio: "S/.88",
+        },
+        {
+          id: 10,
+          talla: "8",
+          precio: "S/.90",
+        },
+        {
+          id: 12,
+          talla: "10",
+          precio: "S/.90",
+        },
+        {
+          id: 14,
+          talla: "12",
+          precio: "S/.90",
+        },
+        {
+          id: 16,
+          talla: "14",
+          precio: "S/.90",
+        },
+      ],
+    },
+    {
+      id: 6,
+      grupo: 1,
+      codigo: 2,
+      details: [
+        {
+          id: 6,
+          talla: "4",
+          precio: "S/.88",
+        },
+        {
+          id: 8,
+          talla: "6",
+          precio: "S/.88",
+        },
+        {
+          id: 10,
+          talla: "8",
+          precio: "S/.90",
+        },
+        {
+          id: 12,
+          talla: "10",
+          precio: "S/.90",
+        },
+        {
+          id: 14,
+          talla: "12",
+          precio: "S/.90",
+        },
+        {
+          id: 16,
+          talla: "14",
+          precio: "S/.90",
+        },
+      ],
+    },
+  ],
+};
+
+const listproducts = {
+  categories: [
+    //Conjuntos
+    {
+      id: 1,
+      grupo: 1,
+      codigo: 1,
+      name: "Conjuntos Jeans Strech Negro",
+      href: "#",
+      price: "$13",
+      description: "3 sizes available",
+      imageSrc: "https://i.postimg.cc/KY5GDHPG/DJI-20250416114652-0283-D.png",
+      imageAlt:
+        "Person using a pen to cross a task off a productivity paper card.",
+    },
+    {
+      id: 2,
+      grupo: 1,
+      codigo: 2,
+      name: "Conjuntos Jeans Strech Celeste",
+      href: "#",
+      price: "$64",
+      description: "Walnut",
+      imageSrc: "https://i.postimg.cc/R0bMYnDy/DJI-20250416114057-0265-D.png",
+      imageAlt: "Paper card sitting upright in walnut card holder on desk.",
+    },
+    //Pantalones
+    {
+      id: 3,
+      grupo: 2,
+      codigo: 1,
+      name: "Pantalon Jeans Strech",
+      href: "#",
+      price: "$64",
+      description: "Walnut",
+      imageSrc: "https://i.postimg.cc/CLQzKhNr/PN-01.png",
+      imageAlt: "Paper card sitting upright in walnut card holder on desk.",
+    },
+    {
+      id: 4,
+      grupo: 2,
+      codigo: 2,
+      name: "Pantalon Rigido Clasico",
+      href: "#",
+      price: "$64",
+      description: "Walnut",
+      imageSrc: "https://i.postimg.cc/DzNrhzx1/PANTALON-RIGIDO-01.png",
+      imageAlt: "Paper card sitting upright in walnut card holder on desk.",
+    },
+    {
+      id: 6,
+      grupo: 2,
+      codigo: 3,
+      name: "Pantalon Rigido Cargo",
+      href: "#",
+      price: "$64",
+      description: "Walnut",
+      imageSrc: "https://i.postimg.cc/3RywrRHV/Pant-rigido-cargo-03.png",
+      imageAlt: "Paper card sitting upright in walnut card holder on desk.",
+    },
+    //Shorts
+    {
+      id: 5,
+      grupo: 3,
+      codigo: 1,
+      name: "Shorts Jeans Strech",
+      href: "#",
+      price: "$64",
+      description: "Walnut",
+      imageSrc: "https://i.postimg.cc/HnLCf5t9/Short-1.png",
+      imageAlt: "Paper card sitting upright in walnut card holder on desk.",
     },
   ],
 };
@@ -88,6 +350,8 @@ const detalleProduct = {
   detalle: [
     {
       id: 1,
+      grupo: 2,
+      codigo: 1,
       name: "Pantalon Jeans Streech con Regulador",
       price: "S/.37",
       rating: 4,
@@ -157,69 +421,357 @@ const detalleProduct = {
         },
       ],
     },
-  ],
-};
-
-const listproducts = {
-  categories: [
-    //Conjuntos
-    {
-      id: 1,
-      grupo: 1,
-      name: "Conjuntos Modelo 1",
-      href: "#",
-      price: "$13",
-      description: "3 sizes available",
-      imageSrc:
-        "https://tailwindui.com/plus-assets/img/ecommerce-images/category-page-01-image-card-01.jpg",
-      imageAlt:
-        "Person using a pen to cross a task off a productivity paper card.",
-    },
     {
       id: 2,
-      grupo: 1,
-      name: "Conjunto Modelo 2",
-      href: "#",
-      price: "$64",
-      description: "Walnut",
-      imageSrc:
-        "https://tailwindui.com/plus-assets/img/ecommerce-images/category-page-01-image-card-02.jpg",
-      imageAlt: "Paper card sitting upright in walnut card holder on desk.",
+      grupo: 2,
+      codigo: 2,
+      name: "Pantalon Rigido Clasico",
+      price: "S/.37",
+      rating: 4,
+      images: [
+        {
+          id: 1,
+          name: "Angled view",
+          src: "https://i.postimg.cc/DzNrhzx1/PANTALON-RIGIDO-01.png",
+          alt: "Angled front view with bag zipped and handles upright.",
+        },
+        {
+          id: 2,
+          name: "Angled view",
+          src: "https://i.postimg.cc/GtdHnwnk/PANTALON-RIGIDO-02.png",
+          alt: "Angled front view with bag zipped and handles upright.",
+        },
+
+        // More images...
+      ],
+      colors: [
+        {
+          name: "Washed Black",
+          bgColor: "bg-blue-900",
+          selectedColor: "ring-gray-700",
+        },
+        // { name: "White", bgColor: "bg-white", selectedColor: "ring-gray-400" },
+        /*{
+      name: "Washed Gray",
+      bgColor: "bg-gray-500",
+      selectedColor: "ring-gray-500",
+    },*/
+      ],
+      sizes: [
+        { id: "6", inStock: true },
+        { id: "8", inStock: true },
+        { id: "10", inStock: true },
+        { id: "12", inStock: true },
+        { id: "14", inStock: true },
+        { id: "16", inStock: true },
+      ],
+      description: `
+    <p>El pantalon es completamente regulable debido a su elastico que lleva en la cintura.</>
+    
+  `,
+      details: [
+        {
+          name: "Medidas del Producto  (Largo)",
+          items: [
+            "Talla 6  : 64 cm",
+            "Talla 8  : 68 cm",
+            "Talla 10 : 72 cm",
+            "Talla 12 : 76 cm",
+            "Talla 14 : 80 cm",
+            "Talla 16 : 84 cm",
+          ],
+        },
+      ],
     },
-    //Pantalones
     {
       id: 3,
-      grupo: 2,
-      name: "Pantalon Jeans Modelo 1",
-      href: "#",
-      price: "$64",
-      description: "Walnut",
-      imageSrc:
-        "https://tailwindui.com/plus-assets/img/ecommerce-images/category-page-01-image-card-02.jpg",
-      imageAlt: "Paper card sitting upright in walnut card holder on desk.",
+      grupo: 3,
+      codigo: 1,
+      name: "Shorts Jeans Strech",
+      price: "S/.37",
+      rating: 4,
+      images: [
+        {
+          id: 1,
+          name: "Angled view",
+          src: "https://i.postimg.cc/HnLCf5t9/Short-1.png",
+          alt: "Angled front view with bag zipped and handles upright.",
+        },
+        {
+          id: 2,
+          name: "Angled view",
+          src: "https://i.postimg.cc/y6fK0QVQ/Short-2.png",
+          alt: "Angled front view with bag zipped and handles upright.",
+        },
+        {
+          id: 3,
+          name: "Angled view",
+          src: "https://i.postimg.cc/Nfcgs9jY/Short-3.png",
+          alt: "Angled front view with bag zipped and handles upright.",
+        },
+
+        // More images...
+      ],
+      colors: [
+        {
+          name: "Washed Black",
+          bgColor: "bg-blue-900",
+          selectedColor: "ring-gray-700",
+        },
+        // { name: "White", bgColor: "bg-white", selectedColor: "ring-gray-400" },
+        /*{
+      name: "Washed Gray",
+      bgColor: "bg-gray-500",
+      selectedColor: "ring-gray-500",
+    },*/
+      ],
+      sizes: [
+        { id: "6", inStock: true },
+        { id: "8", inStock: true },
+        { id: "10", inStock: true },
+        { id: "12", inStock: true },
+        { id: "14", inStock: true },
+        { id: "16", inStock: true },
+      ],
+      description: `
+    <p>El Shorts es completamente regulable debido a su elastico que lleva en la cintura.</>
+    
+  `,
+      details: [
+        {
+          name: "Medidas del Producto  (Largo)",
+          items: [
+            "Talla 6  : 37 cm",
+            "Talla 8  : 39 1/2 cm",
+            "Talla 10 : 42 cm",
+            "Talla 12 : 43 1/2 cm",
+            "Talla 14 : 46 cm",
+            "Talla 16 : 48 1/2 cm",
+          ],
+        },
+      ],
     },
     {
       id: 4,
       grupo: 2,
-      name: "Pantalon Jeans Modelo 1",
-      href: "#",
-      price: "$64",
-      description: "Walnut",
-      imageSrc:
-        "https://tailwindui.com/plus-assets/img/ecommerce-images/category-page-01-image-card-02.jpg",
-      imageAlt: "Paper card sitting upright in walnut card holder on desk.",
+      codigo: 3,
+      name: "Pantalon Cargo Rigido",
+      price: "S/.37",
+      rating: 4,
+      images: [
+        {
+          id: 1,
+          name: "Angled view",
+          src: "https://i.postimg.cc/3RywrRHV/Pant-rigido-cargo-03.png",
+          alt: "Angled front view with bag zipped and handles upright.",
+        },
+        {
+          id: 2,
+          name: "Angled view",
+          src: "https://i.postimg.cc/gkpGQ4rf/Pant-rigido-cargo-04.png",
+          alt: "Angled front view with bag zipped and handles upright.",
+        },
+        {
+          id: 3,
+          name: "Angled view",
+          src: "https://i.postimg.cc/W1WjDvSv/Pant-rigido-cargo-02.png",
+          alt: "Angled front view with bag zipped and handles upright.",
+        },
+        {
+          id: 4,
+          name: "Angled view",
+          src: "https://i.postimg.cc/nrJt8cVv/Pant-rigido-cargo-01.png",
+          alt: "Angled front view with bag zipped and handles upright.",
+        },
+
+        // More images...
+      ],
+      colors: [
+        {
+          name: "Washed Black",
+          bgColor: "bg-blue-900",
+          selectedColor: "ring-gray-700",
+        },
+        // { name: "White", bgColor: "bg-white", selectedColor: "ring-gray-400" },
+        /*{
+      name: "Washed Gray",
+      bgColor: "bg-gray-500",
+      selectedColor: "ring-gray-500",
+    },*/
+      ],
+      sizes: [
+        { id: "6", inStock: true },
+        { id: "8", inStock: true },
+        { id: "10", inStock: true },
+        { id: "12", inStock: true },
+        { id: "14", inStock: true },
+        { id: "16", inStock: true },
+      ],
+      description: `
+    <p>El pantalon es completamente regulable debido a su elastico que lleva en la cintura.</>
+    
+  `,
+      details: [
+        {
+          name: "Medidas del Producto  (Largo)",
+          items: [
+            "Talla 6  : 64 cm",
+            "Talla 8  : 68 cm",
+            "Talla 10 : 72 cm",
+            "Talla 12 : 76 cm",
+            "Talla 14 : 80 cm",
+            "Talla 16 : 84 cm",
+          ],
+        },
+      ],
     },
-    //Shorts
     {
       id: 5,
-      grupo: 3,
-      name: "Shorts Modelo 1",
-      href: "#",
-      price: "$64",
-      description: "Walnut",
-      imageSrc:
-        "https://tailwindui.com/plus-assets/img/ecommerce-images/category-page-01-image-card-02.jpg",
-      imageAlt: "Paper card sitting upright in walnut card holder on desk.",
+      grupo: 1,
+      codigo: 1,
+      name: "Conjunto Jeans Strech Negro con Pantalon Regulador",
+      price: "S/.37",
+      rating: 4,
+      images: [
+        {
+          id: 1,
+          name: "Angled view",
+          src: "https://i.postimg.cc/KY5GDHPG/DJI-20250416114652-0283-D.png",
+          alt: "Angled front view with bag zipped and handles upright.",
+        },
+        {
+          id: 2,
+          name: "Angled view",
+          src: "https://i.postimg.cc/B660cQZp/DJI-20250416114420-0273-D.png",
+          alt: "Angled front view with bag zipped and handles upright.",
+        },
+        {
+          id: 3,
+          name: "Angled view",
+          src: "https://i.postimg.cc/NF2vSJHr/DJI-20250416114341-0269-D.png",
+          alt: "Angled front view with bag zipped and handles upright.",
+        },
+        {
+          id: 4,
+          name: "Angled view",
+          src: "https://i.postimg.cc/3rzkRz9V/DJI-20250416114538-0280-D.png",
+          alt: "Angled front view with bag zipped and handles upright.",
+        },
+
+        // More images...
+      ],
+      colors: [
+        {
+          name: "Washed Black",
+          bgColor: "bg-blue-900",
+          selectedColor: "ring-gray-700",
+        },
+        // { name: "White", bgColor: "bg-white", selectedColor: "ring-gray-400" },
+        /*{
+      name: "Washed Gray",
+      bgColor: "bg-gray-500",
+      selectedColor: "ring-gray-500",
+    },*/
+      ],
+      sizes: [
+        { id: "6", inStock: true },
+        { id: "8", inStock: true },
+        { id: "10", inStock: true },
+        { id: "12", inStock: true },
+        { id: "14", inStock: true },
+        { id: "16", inStock: true },
+      ],
+      description: `
+    <p>El pantalon es completamente regulable debido a su elastico que lleva en la cintura.</>
+    
+  `,
+      details: [
+        {
+          name: "Medidas del Producto  (Largo)",
+          items: [
+            "Talla 6  : 60 cm",
+            "Talla 8  : 64 cm",
+            "Talla 10 : 68 cm",
+            "Talla 12 : 72 cm",
+            "Talla 14 : 76 cm",
+            "Talla 16 : 80 cm",
+          ],
+        },
+      ],
+    },
+    {
+      id: 6,
+      grupo: 1,
+      codigo: 2,
+      name: "Conjunto Jeans Strech Celeste con Pantalon Regulador",
+      price: "S/.37",
+      rating: 4,
+      images: [
+        {
+          id: 1,
+          name: "Angled view",
+          src: "https://i.postimg.cc/R0bMYnDy/DJI-20250416114057-0265-D.png",
+          alt: "Angled front view with bag zipped and handles upright.",
+        },
+        {
+          id: 2,
+          name: "Angled view",
+          src: "https://i.postimg.cc/9M7jNgTw/DJI-20250416113903-0261-D.png",
+          alt: "Angled front view with bag zipped and handles upright.",
+        },
+        {
+          id: 3,
+          name: "Angled view",
+          src: "https://i.postimg.cc/kX9dfc5D/DJI-20250416113806-0256-D.png",
+          alt: "Angled front view with bag zipped and handles upright.",
+        },
+        {
+          id: 4,
+          name: "Angled view",
+          src: "https://i.postimg.cc/9fs6TPSm/DJI-20250416114130-0268-D.png",
+          alt: "Angled front view with bag zipped and handles upright.",
+        },
+
+        // More images...
+      ],
+      colors: [
+        {
+          name: "Washed Black",
+          bgColor: "bg-blue-900",
+          selectedColor: "ring-gray-700",
+        },
+        // { name: "White", bgColor: "bg-white", selectedColor: "ring-gray-400" },
+        /*{
+      name: "Washed Gray",
+      bgColor: "bg-gray-500",
+      selectedColor: "ring-gray-500",
+    },*/
+      ],
+      sizes: [
+        { id: "6", inStock: true },
+        { id: "8", inStock: true },
+        { id: "10", inStock: true },
+        { id: "12", inStock: true },
+        { id: "14", inStock: true },
+        { id: "16", inStock: true },
+      ],
+      description: `
+    <p>El pantalon es completamente regulable debido a su elastico que lleva en la cintura.</>
+    
+  `,
+      details: [
+        {
+          name: "Medidas del Producto  (Largo)",
+          items: [
+            "Talla 6  : 60 cm",
+            "Talla 8  : 64 cm",
+            "Talla 10 : 68 cm",
+            "Talla 12 : 72 cm",
+            "Talla 14 : 76 cm",
+            "Talla 16 : 80 cm",
+          ],
+        },
+      ],
     },
   ],
 };
@@ -239,9 +791,12 @@ export default function Products() {
   //let [selected, setSelected] = useState(plans[0]);
   //let [selected, setSelected] = useState(false);
   let [isOpen, setIsOpen] = useState(false);
+  const [parametro, setParametro] = useState(false);
+  const [parametroGrupo, setParametroGrupo] = useState(false);
   const [open, setOpen] = useState(false);
   let [isShowing, setIsShowing] = useState(false);
   const params = useParams();
+
   //cerrar modal
   function closeModal() {
     setIsOpen(false);
@@ -251,8 +806,12 @@ export default function Products() {
     document.getElementById("idMonto").innerText = "";
   }
   //abrir modal
-  function openModal() {
+  function openModal(codigo, grupo) {
     setIsOpen(true);
+    setParametro(codigo);
+    setParametroGrupo(grupo);
+    //console.log(codigo);
+    //console.log(grupo);
   }
   function valorSeleccionado(image) {
     /*setActiveIndex(true);
@@ -269,10 +828,10 @@ export default function Products() {
     return classes.filter(Boolean).join(" ");
   }
 
-  function onClickHandler(id) {
+  function onClickHandler(id, codigo, grupo) {
     //console.log(id);
     seleccionTalla.seleccion.map((product) =>
-      product.grupo == params.id
+      product.grupo == grupo && product.codigo == codigo
         ? product.details.map((item) =>
             item.id == id
               ? (document.getElementById("idMonto").innerText = item.precio)
@@ -321,7 +880,7 @@ export default function Products() {
                 <a key={product.id} href={product.href} className="group">
                   <button
                     type="button"
-                    onClick={() => openModal()}
+                    onClick={() => openModal(product.codigo, product.grupo)}
                     className=""
                   >
                     <img
@@ -391,47 +950,55 @@ export default function Products() {
                           <div className="mx-auto mt-6  w-full max-w-2xl sm:block lg:max-w-none">
                             <TabList className="grid grid-cols-4 gap-6">
                               {detalleProduct.detalle.map((image, selected) =>
-                                image.images.map((item) => (
-                                  <Tab
-                                    key={item.id}
-                                    className="relative  h-24  sm:h-56 sm:w-36   
+                                image.codigo == parametro &&
+                                image.grupo == parametroGrupo
+                                  ? image.images.map((item) => (
+                                      <Tab
+                                        key={item.id}
+                                        className="relative  h-24  sm:h-56 sm:w-36   
                                                   bg-white text-sm font-medium uppercase text-gray-900 
                                                   hover:bg-gray-50 focus:outline-none focus:ring focus:ring-opacity-50 "
-                                  >
-                                    <span className="sr-only">{item.name}</span>
-                                    <span className="absolute inset-0 overflow-hidden rounded-md">
-                                      <img
-                                        alt=""
-                                        src={item.src}
-                                        className="h-full w-full object-cover object-center px-1 rounded-2xl"
-                                      />
-                                    </span>
-                                    <span
-                                      className={classNames(
-                                        selected
-                                          ? "ring-transparent"
-                                          : "ring-transparent",
-                                        "pointer-events-none absolute inset-0 rounded-2xl ring-2 ring-offset-2"
-                                      )}
-                                      aria-hidden="true"
-                                    />
-                                  </Tab>
-                                ))
+                                      >
+                                        <span className="sr-only">
+                                          {item.name}
+                                        </span>
+                                        <span className="absolute inset-0 overflow-hidden rounded-md">
+                                          <img
+                                            alt=""
+                                            src={item.src}
+                                            className="h-full w-full object-cover object-center px-1 rounded-2xl"
+                                          />
+                                        </span>
+                                        <span
+                                          className={classNames(
+                                            selected
+                                              ? "ring-transparent"
+                                              : "ring-transparent",
+                                            "pointer-events-none absolute inset-0 rounded-2xl ring-2 ring-offset-2"
+                                          )}
+                                          aria-hidden="true"
+                                        />
+                                      </Tab>
+                                    ))
+                                  : null
                               )}
                             </TabList>
                           </div>
                           {/* Image Grande */}
                           <TabPanels>
                             {detalleProduct.detalle.map((image) =>
-                              image.images.map((item) => (
-                                <TabPanel key={item.id}>
-                                  <img
-                                    alt={item.alt}
-                                    src={item.src}
-                                    className=" w-full object-cover rounded-3xl"
-                                  />
-                                </TabPanel>
-                              ))
+                              image.codigo == parametro &&
+                              image.grupo == parametroGrupo
+                                ? image.images.map((item) => (
+                                    <TabPanel key={item.id}>
+                                      <img
+                                        alt={item.alt}
+                                        src={item.src}
+                                        className=" w-full object-cover rounded-3xl"
+                                      />
+                                    </TabPanel>
+                                  ))
+                                : null
                             )}
                           </TabPanels>
                         </TabGroup>
@@ -439,28 +1006,33 @@ export default function Products() {
                         {/* Product informacion */}
                         <div className="mt-10 px-4 sm:mt-16 sm:px-0 lg:mt-0 font-DynaPuff">
                           {/* aqui inicia el arreglo */}
-                          {detalleProduct.detalle.map((image, selected) => (
-                            <div key={image.id}>
-                              <h1 className="text-3xl  tracking-tight text-gray-900 ">
-                                {image.name}
-                              </h1>
+                          {detalleProduct.detalle.map((image, selected) =>
+                            image.codigo == parametro &&
+                            image.grupo == parametroGrupo ? (
+                              <div key={image.id}>
+                                <h1 className="text-3xl  tracking-tight text-gray-900 ">
+                                  {image.name}
+                                </h1>
 
-                              <div className="mt-3">
-                                <h2 className="sr-only">Product information</h2>
-                                <p className="text-3xl tracking-tight text-gray-900"></p>
-                              </div>
-                              <div className="mt-6">
-                                <h3 className="sr-only ">Description</h3>
+                                <div className="mt-3">
+                                  <h2 className="sr-only">
+                                    Product information
+                                  </h2>
+                                  <p className="text-3xl tracking-tight text-gray-900"></p>
+                                </div>
+                                <div className="mt-6">
+                                  <h3 className="sr-only ">Description</h3>
 
-                                <div
-                                  dangerouslySetInnerHTML={{
-                                    __html: image.description,
-                                  }}
-                                  className="space-y-6  text-gray-700 "
-                                />
+                                  <div
+                                    dangerouslySetInnerHTML={{
+                                      __html: image.description,
+                                    }}
+                                    className="space-y-6  text-gray-700 "
+                                  />
+                                </div>
                               </div>
-                            </div>
-                          ))}
+                            ) : null
+                          )}
                           {/* Formulario de Tallas */}
                           <form className="mt-6">
                             {/* Size */}
@@ -477,24 +1049,31 @@ export default function Products() {
 
                                 <RadioGroup className="mt-2 grid grid-cols-7 gap-2">
                                   {detalleProduct.detalle.map((size) =>
-                                    size.sizes.map((item) => (
-                                      <Field
-                                        key={item.id}
-                                        disabled={!item.inStock}
-                                        className="flex items-center gap-2"
-                                      >
-                                        <Radio
-                                          value={item}
-                                          className="group flex px-5 py-5 size-1 items-center justify-center rounded-full border bg-white data-[checked]:bg-blue-400 data-[disabled]:bg-gray-100"
-                                          onClick={() =>
-                                            onClickHandler(item.id)
-                                          }
-                                        >
-                                          <span className="invisible size-2 rounded-full bg-white group-data-[checked]:visible" />
-                                          {item.id}
-                                        </Radio>
-                                      </Field>
-                                    ))
+                                    size.codigo == parametro &&
+                                    size.grupo == parametroGrupo
+                                      ? size.sizes.map((item) => (
+                                          <Field
+                                            key={item.id}
+                                            disabled={!item.inStock}
+                                            className="flex items-center gap-2"
+                                          >
+                                            <Radio
+                                              value={item}
+                                              className="group flex px-5 py-5 size-1 items-center justify-center rounded-full border bg-white data-[checked]:bg-blue-400 data-[disabled]:bg-gray-100"
+                                              onClick={() =>
+                                                onClickHandler(
+                                                  item.id,
+                                                  parametro,
+                                                  parametroGrupo
+                                                )
+                                              }
+                                            >
+                                              <span className="invisible size-2 rounded-full bg-white group-data-[checked]:visible" />
+                                              {item.id}
+                                            </Radio>
+                                          </Field>
+                                        ))
+                                      : null
                                   )}
                                 </RadioGroup>
                               </fieldset>
@@ -583,39 +1162,42 @@ export default function Products() {
                             {/* Acordion */}
                             <div className="divide-y divide-gray-200 border-t">
                               {detalleProduct.detalle.map((detail) =>
-                                detail.details.map((item) => (
-                                  <Disclosure key={item.name} as="div">
-                                    <h3>
-                                      <DisclosureButton className="group relative flex w-full items-center justify-between py-6 text-left">
-                                        <span className="text-sm  text-gray-900 group-data-open:text-indigo-600">
-                                          {item.name}
-                                        </span>
-                                        <span className="ml-6 flex items-center">
-                                          <PlusIcon
-                                            aria-hidden="true"
-                                            className="block size-6 text-gray-400 group-hover:text-gray-500 group-data-open:hidden"
-                                          />
-                                          <MinusIcon
-                                            aria-hidden="true"
-                                            className="hidden size-6 text-indigo-400 group-hover:text-indigo-500 group-data-open:block"
-                                          />
-                                        </span>
-                                      </DisclosureButton>
-                                    </h3>
-                                    <DisclosurePanel className="pb-6">
-                                      <ul
-                                        role="list"
-                                        className="list-disc space-y-1 pl-5 text-sm/6 text-gray-700 marker:text-gray-300"
-                                      >
-                                        {item.items.map((lista) => (
-                                          <li key={lista} className="pl-2 ">
-                                            {lista}
-                                          </li>
-                                        ))}
-                                      </ul>
-                                    </DisclosurePanel>
-                                  </Disclosure>
-                                ))
+                                detail.codigo == parametro &&
+                                detail.grupo == parametroGrupo
+                                  ? detail.details.map((item) => (
+                                      <Disclosure key={item.name} as="div">
+                                        <h3>
+                                          <DisclosureButton className="group relative flex w-full items-center justify-between py-6 text-left">
+                                            <span className="text-sm  text-gray-900 group-data-open:text-indigo-600">
+                                              {item.name}
+                                            </span>
+                                            <span className="ml-6 flex items-center">
+                                              <PlusIcon
+                                                aria-hidden="true"
+                                                className="block size-6 text-gray-400 group-hover:text-gray-500 group-data-open:hidden"
+                                              />
+                                              <MinusIcon
+                                                aria-hidden="true"
+                                                className="hidden size-6 text-indigo-400 group-hover:text-indigo-500 group-data-open:block"
+                                              />
+                                            </span>
+                                          </DisclosureButton>
+                                        </h3>
+                                        <DisclosurePanel className="pb-6">
+                                          <ul
+                                            role="list"
+                                            className="list-disc space-y-1 pl-5 text-sm/6 text-gray-700 marker:text-gray-300"
+                                          >
+                                            {item.items.map((lista) => (
+                                              <li key={lista} className="pl-2 ">
+                                                {lista}
+                                              </li>
+                                            ))}
+                                          </ul>
+                                        </DisclosurePanel>
+                                      </Disclosure>
+                                    ))
+                                  : null
                               )}
                             </div>
                           </section>
