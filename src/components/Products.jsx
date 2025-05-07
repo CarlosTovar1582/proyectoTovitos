@@ -1,7 +1,9 @@
 import React, { useContext, Fragment, useState } from "react";
 //clases dinamicas
+import { Button } from "rsuite";
 import { clsx } from "clsx";
 import { useLocation, useParams } from "react-router-dom";
+import Atras from "../components/Atras";
 //import { Button, Transition } from "@headlessui/react";
 import {
   Field,
@@ -14,7 +16,7 @@ import {
   Transition,
   RadioGroup,
   Disclosure,
-  Button,
+  //Button,
   DisclosureButton,
   DisclosurePanel,
   TabList,
@@ -41,7 +43,7 @@ import {
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
-
+//costo de cada producto
 const seleccionTalla = {
   seleccion: [
     //Pantalones
@@ -270,7 +272,7 @@ const seleccionTalla = {
     },
   ],
 };
-
+//mostrar productos en general
 const listproducts = {
   categories: [
     //Conjuntos
@@ -345,7 +347,7 @@ const listproducts = {
     },
   ],
 };
-
+//mostrar productos al detalle
 const detalleProduct = {
   detalle: [
     {
@@ -775,23 +777,32 @@ const detalleProduct = {
     },
   ],
 };
-/*const plans = [
-  { name: "Startup", available: true },
-  { name: "Business", available: true },
-  { name: "Enterprise", available: false },
-];*/
+function enviarWs(titulo, talla, monto, cantidad) {
+  if (monto == false) {
+    document.getElementById("idValidacion").innerText = "Seleccione una Talla";
+  } else {
+    console.log(titulo);
+    console.log(talla);
+    console.log(monto);
+    console.log(cantidad);
+  }
+
+  //- Tipo : ${item.tipo}
+  /*window.open(
+    "https://api.whatsapp.com/send?phone=51997373676&text=Me%20interesan%20los%20siguientes%20productos: %0A" +
+      `[Descripción : ${titulo}  +] %0A`,
+
+    "_blank"
+  );*/
+}
 
 export default function Products() {
-  //const [selectedColor, setSelectedColor] = useState(product.colors[0]);
-  //const [selected, setSelected] = useState(product.colors[0]);
-
-  /*const [selectedSize, setSelectedSize] = useState(
-    detalleProduct.detalle.sizes[2]
-  );*/
-  //let [selected, setSelected] = useState(plans[0]);
-  //let [selected, setSelected] = useState(false);
   let [isOpen, setIsOpen] = useState(false);
   const [parametro, setParametro] = useState(false);
+  const [radioValue, setRadioValue] = useState(0);
+  const [titulo, setTitulo] = useState(false);
+  const [monto, setMonto] = useState(false);
+  const [talla, setTalla] = useState(false);
   const [parametroGrupo, setParametroGrupo] = useState(false);
   const [open, setOpen] = useState(false);
   let [isShowing, setIsShowing] = useState(false);
@@ -800,6 +811,8 @@ export default function Products() {
   //cerrar modal
   function closeModal() {
     setIsOpen(false);
+    setTalla(false);
+    setMonto(false);
   }
   function limpiarModal() {
     //setIsOpen(false);
@@ -810,22 +823,21 @@ export default function Products() {
     setIsOpen(true);
     setParametro(codigo);
     setParametroGrupo(grupo);
-    //console.log(codigo);
-    //console.log(grupo);
-  }
-  function valorSeleccionado(image) {
-    /*setActiveIndex(true);
-    setTitulo(item.name);
-    //setParametroDetalle(true);
-    setParametroDetalle(item);
 
-    document.getElementById("idtitulo").style.visibility = "visible";
-    //document.getElementById("idcosto").innerText = "";
-    document.getElementById("idmensaje").innerText = "";
-    document.getElementById("idtallas").style.visibility = "visible";*/
+    //obtener el titulo
+    detalleProduct.detalle.map((item) =>
+      item.grupo == grupo && item.codigo == codigo ? setTitulo(item.name) : null
+    );
   }
+
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
+  }
+  function asignaValores(talla, precio) {
+    document.getElementById("idValidacion").innerText = "";
+    document.getElementById("idMonto").innerText = precio;
+    setTalla(talla);
+    setMonto(precio);
   }
 
   function onClickHandler(id, codigo, grupo) {
@@ -833,9 +845,7 @@ export default function Products() {
     seleccionTalla.seleccion.map((product) =>
       product.grupo == grupo && product.codigo == codigo
         ? product.details.map((item) =>
-            item.id == id
-              ? (document.getElementById("idMonto").innerText = item.precio)
-              : null
+            item.id == id ? asignaValores(id, item.precio) : null
           )
         : null
     );
@@ -862,19 +872,22 @@ export default function Products() {
         backgroundImage: `url("https://i.postimg.cc/RhMc5JvP/Logo-Fondo1.png")`,
       }}
     >
+      <Atras />
       <div className="">
         {/* Mostrar lista deProductos */}
-        <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-          <h1
-            id="products-heading"
-            className="text-center pb-10 font-Concert-One text-6xl"
-          >
-            {"1" == params.id ? "Conjuntos" : null}
-            {"2" == params.id ? "Pantalones" : null}
-            {"3" == params.id ? "Shorts" : null}
-          </h1>
-
-          <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+        <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+          <Button className="w-full  shadow-xl   shadow-blue-600 outline outline-black/5   ">
+            <h1
+              id="products-heading"
+              className="text-center pb-1 font-Concert-One text-5xl  "
+            >
+              {" "}
+              {"1" == params.id ? "Conjuntos" : null}
+              {"2" == params.id ? "Pantalones" : null}
+              {"3" == params.id ? "Shorts" : null}
+            </h1>
+          </Button>
+          <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8 mt-10">
             {listproducts.categories.map((product) =>
               product.grupo == params.id ? (
                 <a key={product.id} href={product.href} className="group">
@@ -886,12 +899,13 @@ export default function Products() {
                     <img
                       alt={product.imageAlt}
                       src={product.imageSrc}
-                      className="aspect-square w-full overflow-hidden rounded-lg object-cover group-hover:opacity-75 sm:aspect-2/3"
+                      className="w-full object-cover"
                     />
+
+                    <div className="mt-4 flex items-center justify-center  text-base font-DynaPuff text-black">
+                      <h5>{product.name}</h5>
+                    </div>
                   </button>
-                  <div className="mt-4 flex items-center justify-center  text-base font-DynaPuff text-blue-600">
-                    <h5>{product.name}</h5>
-                  </div>
                 </a>
               ) : null
             )}
@@ -940,7 +954,7 @@ export default function Products() {
                         >
                           <span className="sr-only">Close</span>
                           <XMarkIcon
-                            className="h-10 w-10 font-bold bg-slate-950 text-white rounded-full"
+                            className="h-10 w-10 font-bold bg-blue-600 text-white rounded-full"
                             aria-hidden="true"
                           />
                         </button>
@@ -1122,7 +1136,14 @@ export default function Products() {
                                 </Button>
                               </div>
                             </div>
-
+                            {/* Mostrar valor de validacion */}
+                            <div className="flex items-center justify-between mt-4">
+                              <h5
+                                id="idValidacion"
+                                className="font-bold text-center tracking-tight text-red-600 mt-2"
+                              ></h5>
+                            </div>
+                            {/* Mostrar valor de validacion */}
                             <div className="flex items-center justify-between mt-4">
                               <div className="text-sm  font-bold  text-gray-900">
                                 Nota *
@@ -1132,11 +1153,14 @@ export default function Products() {
                               A partir de 3 productos para adelante tiene un
                               costo al x mayor x cada uno de ellos.
                             </h6>
-
+                            {/* Enviar a Carrito */}
                             <div className="mt-10 flex">
                               <button
-                                type="submit"
+                                type="button"
                                 className=" flex max-w-xs flex-1 items-center justify-center rounded-md border border-transparent bg-green-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 focus:outline-hidden sm:w-full"
+                                onClick={() => {
+                                  enviarWs(titulo, talla, monto, calculo);
+                                }}
                               >
                                 Solicitar
                               </button>
