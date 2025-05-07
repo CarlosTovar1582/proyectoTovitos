@@ -781,14 +781,20 @@ function enviarWs(titulo, talla, monto, cantidad) {
   if (monto == false) {
     document.getElementById("idValidacion").innerText = "Seleccione una Talla";
   } else {
-    console.log(titulo);
+    /* console.log(titulo);
     console.log(talla);
     console.log(monto);
-    console.log(cantidad);
+    console.log(cantidad);*/
+    window.open(
+      "https://api.whatsapp.com/send?phone=51997373676&text=Me%20interesan%20los%20siguientes%20productos: %0A" +
+        `[Descripción : ${titulo}  +] - [Talla : ${talla}  +] - [Monto : ${monto}  +] - [Cantidad : ${cantidad}  +] %0A`,
+
+      "_blank"
+    );
   }
 
   //- Tipo : ${item.tipo}
-  /*window.open(
+  /* window.open(
     "https://api.whatsapp.com/send?phone=51997373676&text=Me%20interesan%20los%20siguientes%20productos: %0A" +
       `[Descripción : ${titulo}  +] %0A`,
 
