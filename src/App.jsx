@@ -7,6 +7,7 @@ import Cards from "./components/Cards";
 import Containers from "./components/Containers";
 import Division from "./components/Division";
 import ContainersSalditos from "./components/ContainersSalditos";
+
 import Products from "./components/Products";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <Division />
+
         <Routes>
           <Route path="/" element={<Containers />} />
           <Route path="/Containers" element={<Containers />} />
