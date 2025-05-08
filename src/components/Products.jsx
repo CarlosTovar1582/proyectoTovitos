@@ -1030,7 +1030,7 @@ export default function Products() {
                             image.codigo == parametro &&
                             image.grupo == parametroGrupo ? (
                               <div key={image.id}>
-                                <h1 className="text-3xl  tracking-tight text-gray-900 ">
+                                <h1 className="text-3xl   text-blue-700 font-Concert-One ">
                                   {image.name}
                                 </h1>
 
