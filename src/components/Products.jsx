@@ -280,7 +280,7 @@ const listproducts = {
       id: 1,
       grupo: 1,
       codigo: 1,
-      name: "Conjuntos Jeans Strech Negro",
+      name: "Conjuntos Jeans Strech Azul  ",
       href: "#",
       price: "$13",
       description: "3 sizes available",
@@ -908,8 +908,8 @@ export default function Products() {
                       className="w-full object-cover"
                     />
 
-                    <div className="mt-4 flex items-center justify-center  text-base font-DynaPuff text-black">
-                      <h5>{product.name}</h5>
+                    <div className="mt-4 flex items-center justify-center  text-base font-Concert-One text-blue-700">
+                      <h3>{product.name}</h3>
                     </div>
                   </button>
                 </a>
@@ -1115,10 +1115,10 @@ export default function Products() {
                               </div>
                             </div>
                             <div className="grid grid-cols-6  text-1xl mt-4 ">
-                              <div className="col-span-1 border-2 border-slate-200 rounded">
+                              <div className="col-span-1 border-2 border-slate-200 rounded text-center">
                                 <Button
                                   className="rounded  py-1 px-4 text-3xl text-black data-[hover]:bg-slate-950 hover:text-black
-                                                        data-[active]:bg-sky-700 h-10 w-11 sm:h-10 sm:w-24 md:h-10 md:w-24"
+                                                        data-[active]:bg-sky-700 h-10 w-12 sm:h-10 sm:w-24 md:h-10 md:w-24"
                                   onClick={restarNumero}
                                 >
                                   -
@@ -1132,10 +1132,10 @@ export default function Products() {
                                   {calculo}
                                 </h1>
                               </div>
-                              <div className="col-span-1 border-2 border-slate-200 rounded">
+                              <div className="col-span-1 border-2 border-slate-200 rounded text-center">
                                 <Button
                                   className="rounded  py-1 px-4 text-3xl text-black data-[hover]:bg-slate-950 hover:text-black
-                                                        data-[active]:bg-sky-700    h-10 w-11 sm:h-10 sm:w-24 md:h-10 md:w-24"
+                                                        data-[active]:bg-sky-700    h-10 w-12 sm:h-10 sm:w-24 md:h-10 md:w-24"
                                   onClick={sumarNumero}
                                 >
                                   +
