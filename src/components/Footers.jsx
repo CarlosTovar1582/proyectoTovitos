@@ -50,14 +50,14 @@ export default function Footers() {
               className="text-gray-200 hover:text-gray-300"
             >
               <span className="sr-only">{item.name}</span>
-              <item.icon aria-hidden="true" className="size-6" />
             </a>
           ))}
         </div>
         <p className="mt-2 text-center text-sm/6 text-gray-200 font-Concert-One">
-          &copy; 2025 Tovitos, Todos los derechos reservados.
+          © 2025 All rights reserved|Confecciones Jeans Tovitos .
         </p>
       </div>
     </footer>
   );
 }
+/*    <item.icon aria-hidden="true" className="size-6" /> */
