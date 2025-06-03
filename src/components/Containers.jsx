@@ -7,6 +7,7 @@ const items = [
   { id: 1, codigo: 1, descripcion: "CONJUNTOS" },
   { id: 2, codigo: 2, descripcion: "PANTALONES" },
   { id: 3, codigo: 3, descripcion: "SHORTS" },
+  { id: 4, codigo: 4, descripcion: "CASACAS" },
   // More items...
 ];
 
