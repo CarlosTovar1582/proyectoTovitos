@@ -270,6 +270,80 @@ const seleccionTalla = {
         },
       ],
     },
+    {
+      id: 7,
+      grupo: 4,
+      codigo: 1,
+      details: [
+        {
+          id: 6,
+          talla: "4",
+          precio: "S/.68",
+        },
+        {
+          id: 8,
+          talla: "6",
+          precio: "S/.68",
+        },
+        {
+          id: 10,
+          talla: "8",
+          precio: "S/.78",
+        },
+        {
+          id: 12,
+          talla: "10",
+          precio: "S/.78",
+        },
+        {
+          id: 14,
+          talla: "12",
+          precio: "S/.78",
+        },
+        {
+          id: 16,
+          talla: "14",
+          precio: "S/.78",
+        },
+      ],
+    },
+    {
+      id: 8,
+      grupo: 4,
+      codigo: 2,
+      details: [
+        {
+          id: 6,
+          talla: "4",
+          precio: "S/.68",
+        },
+        {
+          id: 8,
+          talla: "6",
+          precio: "S/.68",
+        },
+        {
+          id: 10,
+          talla: "8",
+          precio: "S/.78",
+        },
+        {
+          id: 12,
+          talla: "10",
+          precio: "S/.78",
+        },
+        {
+          id: 14,
+          talla: "12",
+          precio: "S/.78",
+        },
+        {
+          id: 16,
+          talla: "14",
+          precio: "S/.78",
+        },
+      ],
+    },
   ],
 };
 //mostrar productos en general
@@ -345,6 +419,30 @@ const listproducts = {
       imageSrc: "https://i.postimg.cc/HnLCf5t9/Short-1.png",
       imageAlt: "Paper card sitting upright in walnut card holder on desk.",
     },
+    {
+      id: 7,
+      grupo: 4,
+      codigo: 1,
+      name: "Casaca Strech con Capucha Celeste",
+      href: "#",
+      price: "$64",
+      description: "Walnut",
+      imageSrc:
+        "https://i.postimg.cc/PJdMKSG3/Whats-App-Image-2025-05-30-at-11-06-22-AM-4.png",
+      imageAlt: "Paper card sitting upright in walnut card holder on desk.",
+    },
+    {
+      id: 8,
+      grupo: 4,
+      codigo: 2,
+      name: "Casaca Strech con Capucha Azul",
+      href: "#",
+      price: "$64",
+      description: "Walnut",
+      imageSrc:
+        "https://i.postimg.cc/50Wc9WvX/Whats-App-Image-2025-05-30-at-11-06-48-AM-2-1.png",
+      imageAlt: "Paper card sitting upright in walnut card holder on desk.",
+    },
   ],
 };
 //mostrar productos al detalle
@@ -411,7 +509,7 @@ const detalleProduct = {
   `,
       details: [
         {
-          name: "Medidas del Producto  (Largo)",
+          name: "Medidas del Pantalon  (Largo)",
           items: [
             "Talla 6  : 60 cm",
             "Talla 8  : 64 cm",
@@ -473,7 +571,7 @@ const detalleProduct = {
   `,
       details: [
         {
-          name: "Medidas del Producto  (Largo)",
+          name: "Medidas del   (Largo)",
           items: [
             "Talla 6  : 64 cm",
             "Talla 8  : 68 cm",
@@ -489,7 +587,7 @@ const detalleProduct = {
       id: 3,
       grupo: 3,
       codigo: 1,
-      name: "Shorts Jeans Strech",
+      name: "Short Jeans Strech",
       price: "S/.37",
       rating: 4,
       images: [
@@ -541,7 +639,7 @@ const detalleProduct = {
   `,
       details: [
         {
-          name: "Medidas del Producto  (Largo)",
+          name: "Medidas del Short  (Largo)",
           items: [
             "Talla 6  : 37 cm",
             "Talla 8  : 39 1/2 cm",
@@ -615,7 +713,7 @@ const detalleProduct = {
   `,
       details: [
         {
-          name: "Medidas del Producto  (Largo)",
+          name: "Medidas del Pantalon  (Largo)",
           items: [
             "Talla 6  : 64 cm",
             "Talla 8  : 68 cm",
@@ -684,12 +782,12 @@ const detalleProduct = {
         { id: "16", inStock: true },
       ],
       description: `
-    <p>El pantalon es completamente regulable debido a su elastico que lleva en la cintura.</>
+    <p>El pantalon es completamente regulable debido a su elastico que lleva en la cintura.La casaca es con capucha y tiene forro de carnero.</>
     
   `,
       details: [
         {
-          name: "Medidas del Producto  (Largo)",
+          name: "Medidas del Pantalon  (Largo)",
           items: [
             "Talla 6  : 60 cm",
             "Talla 8  : 64 cm",
@@ -758,12 +856,148 @@ const detalleProduct = {
         { id: "16", inStock: true },
       ],
       description: `
-    <p>El pantalon es completamente regulable debido a su elastico que lleva en la cintura.</>
+    <p>El pantalon es completamente regulable debido a su elastico que lleva en la cintura.La casaca es con capucha y tiene forro de carnero.</>
     
   `,
       details: [
         {
-          name: "Medidas del Producto  (Largo)",
+          name: "Medidas del Pantalon  (Largo)",
+          items: [
+            "Talla 6  : 60 cm",
+            "Talla 8  : 64 cm",
+            "Talla 10 : 68 cm",
+            "Talla 12 : 72 cm",
+            "Talla 14 : 76 cm",
+            "Talla 16 : 80 cm",
+          ],
+        },
+      ],
+    },
+    {
+      id: 7,
+      grupo: 4,
+      codigo: 1,
+      name: "Casaca Strech Celeste con Capucha",
+      price: "S/.37",
+      rating: 4,
+      images: [
+        {
+          id: 1,
+          name: "Angled view",
+          src: "https://i.postimg.cc/t4YCY6S8/Whats-App-Image-2025-05-30-at-11-06-24-AM-1-1.png",
+          alt: "Angled front view with bag zipped and handles upright.",
+        },
+        {
+          id: 2,
+          name: "Angled view",
+          src: "https://i.postimg.cc/HW6gXxym/Whats-App-Image-2025-05-30-at-11-06-23-AM-3-1.png",
+          alt: "Angled front view with bag zipped and handles upright.",
+        },
+        {
+          id: 3,
+          name: "Angled view",
+          src: "https://i.postimg.cc/3RLc4kbb/Whats-App-Image-2025-05-30-at-11-06-23-AM-1-1.png",
+          alt: "Angled front view with bag zipped and handles upright.",
+        },
+
+        // More images...
+      ],
+      colors: [
+        {
+          name: "Washed Black",
+          bgColor: "bg-blue-900",
+          selectedColor: "ring-gray-700",
+        },
+        // { name: "White", bgColor: "bg-white", selectedColor: "ring-gray-400" },
+        /*{
+      name: "Washed Gray",
+      bgColor: "bg-gray-500",
+      selectedColor: "ring-gray-500",
+    },*/
+      ],
+      sizes: [
+        { id: "6", inStock: true },
+        { id: "8", inStock: true },
+        { id: "10", inStock: true },
+        { id: "12", inStock: true },
+        { id: "14", inStock: true },
+        { id: "16", inStock: true },
+      ],
+      description: `
+    <p>Casaca jeans Strech  con capucha y tiene forro de carnero.</>
+    
+  `,
+      details: [
+        {
+          name: "Medidas del Pantalon  (Largo)",
+          items: [
+            "Talla 6  : 60 cm",
+            "Talla 8  : 64 cm",
+            "Talla 10 : 68 cm",
+            "Talla 12 : 72 cm",
+            "Talla 14 : 76 cm",
+            "Talla 16 : 80 cm",
+          ],
+        },
+      ],
+    },
+    {
+      id: 8,
+      grupo: 4,
+      codigo: 2,
+      name: "Casaca Strech Azul con Capucha",
+      price: "S/.37",
+      rating: 4,
+      images: [
+        {
+          id: 1,
+          name: "Angled view",
+          src: "https://i.postimg.cc/DZq1HH1Q/Whats-App-Image-2025-05-30-at-11-07-03-AM-2.png",
+          alt: "Angled front view with bag zipped and handles upright.",
+        },
+        {
+          id: 2,
+          name: "Angled view",
+          src: "https://i.postimg.cc/Z5Cp4Cr5/Whats-App-Image-2025-05-30-at-11-06-48-AM-1-1.png",
+          alt: "Angled front view with bag zipped and handles upright.",
+        },
+        {
+          id: 3,
+          name: "Angled view",
+          src: "https://i.postimg.cc/3RLc4kbb/Whats-App-Image-2025-05-30-at-11-06-23-AM-1-1.png",
+          alt: "Angled front view with bag zipped and handles upright.",
+        },
+
+        // More images...
+      ],
+      colors: [
+        {
+          name: "Washed Black",
+          bgColor: "bg-blue-900",
+          selectedColor: "ring-gray-700",
+        },
+        // { name: "White", bgColor: "bg-white", selectedColor: "ring-gray-400" },
+        /*{
+      name: "Washed Gray",
+      bgColor: "bg-gray-500",
+      selectedColor: "ring-gray-500",
+    },*/
+      ],
+      sizes: [
+        { id: "6", inStock: true },
+        { id: "8", inStock: true },
+        { id: "10", inStock: true },
+        { id: "12", inStock: true },
+        { id: "14", inStock: true },
+        { id: "16", inStock: true },
+      ],
+      description: `
+    <p>Casaca jeans Strech  con capucha y tiene forro de carnero.</>
+    
+  `,
+      details: [
+        {
+          name: "Medidas del Pantalon  (Largo)",
           items: [
             "Talla 6  : 60 cm",
             "Talla 8  : 64 cm",
@@ -891,6 +1125,7 @@ export default function Products() {
               {"1" == params.id ? "Conjuntos" : null}
               {"2" == params.id ? "Pantalones" : null}
               {"3" == params.id ? "Shorts" : null}
+              {"4" == params.id ? "Casacas" : null}
             </h1>
           </Button>
           <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8 mt-10">
@@ -976,7 +1211,7 @@ export default function Products() {
                                       <Tab
                                         key={item.id}
                                         className="relative  h-24  sm:h-56 sm:w-36   
-                                                  bg-white text-sm font-medium uppercase text-gray-900 
+                                                  bg-white text-sm font-medium uppercase text-gray-900  
                                                   hover:bg-gray-50 focus:outline-none focus:ring focus:ring-opacity-50 "
                                       >
                                         <span className="sr-only">
@@ -1124,7 +1359,7 @@ export default function Products() {
                                   -
                                 </Button>
                               </div>
-                              <div className="col-span-1">
+                              <div className="col-span-1 ">
                                 <h1
                                   id="cantidad"
                                   className="text-2xl pt-2 text-center text-slate-700"
@@ -1157,7 +1392,8 @@ export default function Products() {
                             </div>
                             <h6 className=" text-1xl font-bold tracking-tight text-stone-500 mt-2 text-center">
                               A partir de 3 productos para adelante tiene un
-                              costo al x mayor x cada uno de ellos.
+                              costo al x mayor.Todo pedido al por mayor sera por
+                              interno.
                             </h6>
                             {/* Enviar a Carrito */}
                             <div className="mt-10 flex">
