@@ -1011,7 +1011,9 @@ const detalleProduct = {
     },
   ],
 };
-function enviarWs(titulo, talla, monto, cantidad) {
+function enviarWs(titulo, talla, monto, calculo) {
+  //console.log(calculo);
+  //CODIGO DE ENVIO POR WSP
   if (monto == false) {
     document.getElementById("idValidacion").innerText = "Seleccione una Talla";
   } else {
@@ -1021,7 +1023,7 @@ function enviarWs(titulo, talla, monto, cantidad) {
     console.log(cantidad);*/
     window.open(
       "https://api.whatsapp.com/send?phone=51997373676&text=Me%20interesan%20los%20siguientes%20productos: %0A" +
-        `[Descripción : ${titulo}  +] - [Talla : ${talla}  +] - [Monto : ${monto}  +] - [Cantidad : ${cantidad}  +] %0A`,
+        `[Descripción : ${titulo}  +] - [Talla : ${talla}  +] - [Monto : ${monto}  +] - [Cantidad : ${calculo}  +] %0A`,
 
       "_blank"
     );
@@ -1035,7 +1037,7 @@ function enviarWs(titulo, talla, monto, cantidad) {
     "_blank"
   );*/
 }
-
+let calculo = 1;
 export default function Products() {
   let [isOpen, setIsOpen] = useState(false);
   const [parametro, setParametro] = useState(false);
@@ -1063,6 +1065,7 @@ export default function Products() {
     setIsOpen(true);
     setParametro(codigo);
     setParametroGrupo(grupo);
+    calculo = 1;
 
     //obtener el titulo
     detalleProduct.detalle.map((item) =>
@@ -1090,7 +1093,7 @@ export default function Products() {
         : null
     );
   }
-  let calculo = 1;
+
   function restarNumero() {
     if (calculo > -(-1)) {
       calculo -= 1;
@@ -1289,112 +1292,113 @@ export default function Products() {
                             ) : null
                           )}
                           {/* Formulario de Tallas */}
-                          <form className="mt-6">
-                            {/* Size */}
-                            <div>
-                              <fieldset
-                                aria-label="Choose a size"
-                                className="mt-8"
-                              >
-                                <div className="flex items-center justify-between">
-                                  <div className="text-sm font-bold text-gray-900">
-                                    Tallas
-                                  </div>
-                                </div>
 
-                                <RadioGroup className="mt-2 grid grid-cols-7 gap-2">
-                                  {detalleProduct.detalle.map((size) =>
-                                    size.codigo == parametro &&
-                                    size.grupo == parametroGrupo
-                                      ? size.sizes.map((item) => (
-                                          <Field
-                                            key={item.id}
-                                            disabled={!item.inStock}
-                                            className="flex items-center gap-2"
+                          {/* Size */}
+                          <div>
+                            <fieldset
+                              aria-label="Choose a size"
+                              className="mt-8"
+                            >
+                              <div className="flex items-center justify-between">
+                                <div className="text-sm font-bold text-gray-900">
+                                  Tallas
+                                </div>
+                              </div>
+
+                              <RadioGroup className="mt-2 grid grid-cols-7 gap-2">
+                                {detalleProduct.detalle.map((size) =>
+                                  size.codigo == parametro &&
+                                  size.grupo == parametroGrupo
+                                    ? size.sizes.map((item) => (
+                                        <Field
+                                          key={item.id}
+                                          disabled={!item.inStock}
+                                          className="flex items-center gap-2"
+                                        >
+                                          <Radio
+                                            value={item}
+                                            className="group flex px-5 py-5 size-1 items-center justify-center rounded-full border bg-white data-[checked]:bg-blue-400 data-[disabled]:bg-gray-100"
+                                            onClick={() =>
+                                              onClickHandler(
+                                                item.id,
+                                                parametro,
+                                                parametroGrupo
+                                              )
+                                            }
                                           >
-                                            <Radio
-                                              value={item}
-                                              className="group flex px-5 py-5 size-1 items-center justify-center rounded-full border bg-white data-[checked]:bg-blue-400 data-[disabled]:bg-gray-100"
-                                              onClick={() =>
-                                                onClickHandler(
-                                                  item.id,
-                                                  parametro,
-                                                  parametroGrupo
-                                                )
-                                              }
-                                            >
-                                              <span className="invisible size-2 rounded-full bg-white group-data-[checked]:visible" />
-                                              {item.id}
-                                            </Radio>
-                                          </Field>
-                                        ))
-                                      : null
-                                  )}
-                                </RadioGroup>
-                              </fieldset>
+                                            <span className="invisible size-2 rounded-full bg-white group-data-[checked]:visible" />
+                                            {item.id}
+                                          </Radio>
+                                        </Field>
+                                      ))
+                                    : null
+                                )}
+                              </RadioGroup>
+                            </fieldset>
+                          </div>
+                          {/* Precio */}
+                          <div className="flex items-center justify-between mt-4">
+                            <div className="text-sm  font-bold  text-gray-900">
+                              Precio
                             </div>
-                            {/* Precio */}
-                            <div className="flex items-center justify-between mt-4">
-                              <div className="text-sm  font-bold  text-gray-900">
-                                Precio
-                              </div>
+                          </div>
+                          <h1
+                            id="idMonto"
+                            className=" text-6xl font-bold tracking-tight text-red-600 mt-2 text-center"
+                          ></h1>
+                          {/* Cantidad */}
+                          <div className="flex items-center justify-between mt-4">
+                            <div className="text-sm  font-bold  text-gray-900">
+                              Cantidad
                             </div>
-                            <h1
-                              id="idMonto"
-                              className=" text-6xl font-bold tracking-tight text-red-600 mt-2 text-center"
-                            ></h1>
-                            {/* Cantidad */}
-                            <div className="flex items-center justify-between mt-4">
-                              <div className="text-sm  font-bold  text-gray-900">
-                                Cantidad
-                              </div>
-                            </div>
-                            <div className="grid grid-cols-6  text-1xl mt-4 ">
-                              <div className="col-span-1 border-2 border-slate-200 rounded text-center">
-                                <Button
-                                  className="rounded  py-1 px-4 text-3xl text-black data-[hover]:bg-slate-950 hover:text-black
+                          </div>
+                          <div className="grid grid-cols-6  text-1xl mt-4 ">
+                            <div className="col-span-1 border-2 border-slate-200 rounded text-center">
+                              <Button
+                                className="rounded  py-1 px-4 text-3xl text-black data-[hover]:bg-slate-950 hover:text-black
                                                         data-[active]:bg-sky-700 h-10 w-12 sm:h-10 sm:w-24 md:h-10 md:w-24"
-                                  onClick={restarNumero}
-                                >
-                                  -
-                                </Button>
-                              </div>
-                              <div className="col-span-1 ">
-                                <h1
-                                  id="cantidad"
-                                  className="text-2xl pt-2 text-center text-slate-700"
-                                >
-                                  {calculo}
-                                </h1>
-                              </div>
-                              <div className="col-span-1 border-2 border-slate-200 rounded text-center">
-                                <Button
-                                  className="rounded  py-1 px-4 text-3xl text-black data-[hover]:bg-slate-950 hover:text-black
+                                onClick={restarNumero}
+                              >
+                                -
+                              </Button>
+                            </div>
+                            <div className="col-span-1 ">
+                              <h1
+                                id="cantidad"
+                                className="text-2xl pt-2 text-center text-slate-700"
+                              >
+                                {calculo}
+                              </h1>
+                            </div>
+                            <div className="col-span-1 border-2 border-slate-200 rounded text-center">
+                              <Button
+                                className="rounded  py-1 px-4 text-3xl text-black data-[hover]:bg-slate-950 hover:text-black
                                                         data-[active]:bg-sky-700    h-10 w-12 sm:h-10 sm:w-24 md:h-10 md:w-24"
-                                  onClick={sumarNumero}
-                                >
-                                  +
-                                </Button>
-                              </div>
+                                onClick={sumarNumero}
+                              >
+                                +
+                              </Button>
                             </div>
-                            {/* Mostrar valor de validacion */}
-                            <div className="flex items-center justify-between mt-4">
-                              <h5
-                                id="idValidacion"
-                                className="font-bold text-center tracking-tight text-red-600 mt-2"
-                              ></h5>
+                          </div>
+                          {/* Mostrar valor de validacion */}
+                          <div className="flex items-center justify-between mt-4">
+                            <h5
+                              id="idValidacion"
+                              className="font-bold text-center tracking-tight text-red-600 mt-2"
+                            ></h5>
+                          </div>
+                          {/* Mostrar valor de validacion */}
+                          <div className="flex items-center justify-between mt-4">
+                            <div className="text-sm  font-bold  text-gray-900">
+                              Nota *
                             </div>
-                            {/* Mostrar valor de validacion */}
-                            <div className="flex items-center justify-between mt-4">
-                              <div className="text-sm  font-bold  text-gray-900">
-                                Nota *
-                              </div>
-                            </div>
-                            <h6 className=" text-1xl font-bold tracking-tight text-stone-500 mt-2 text-center">
-                              A partir de 3 productos para adelante tiene un
-                              costo al x mayor.Todo pedido al por mayor sera por
-                              interno.
-                            </h6>
+                          </div>
+                          <h6 className=" text-1xl font-bold tracking-tight text-stone-500 mt-2 text-center">
+                            A partir de 3 productos para adelante tiene un costo
+                            al x mayor.Todo pedido al por mayor sera por
+                            interno.
+                          </h6>
+                          <form className="mt-6">
                             {/* Enviar a Carrito */}
                             <div className="mt-10 flex">
                               <button
