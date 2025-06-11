@@ -288,22 +288,22 @@ const seleccionTalla = {
         {
           id: 10,
           talla: "8",
-          precio: "S/.78",
+          precio: "S/.73",
         },
         {
           id: 12,
           talla: "10",
-          precio: "S/.78",
+          precio: "S/.73",
         },
         {
           id: 14,
           talla: "12",
-          precio: "S/.78",
+          precio: "S/.73",
         },
         {
           id: 16,
           talla: "14",
-          precio: "S/.78",
+          precio: "S/.73",
         },
       ],
     },
@@ -325,22 +325,22 @@ const seleccionTalla = {
         {
           id: 10,
           talla: "8",
-          precio: "S/.78",
+          precio: "S/.73",
         },
         {
           id: 12,
           talla: "10",
-          precio: "S/.78",
+          precio: "S/.73",
         },
         {
           id: 14,
           talla: "12",
-          precio: "S/.78",
+          precio: "S/.73",
         },
         {
           id: 16,
           talla: "14",
-          precio: "S/.78",
+          precio: "S/.73",
         },
       ],
     },
